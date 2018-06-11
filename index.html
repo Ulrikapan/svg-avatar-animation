@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>SVG animation with GreenSock</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Bungee+Outline|Comfortaa:300,400,700|Dosis:400,600,800'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div class="section_home">
+  <div class="section_home_bg"></div>
+  <div class="avatarCanvas">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 736.3 656.5">
+      <defs>
+        <clippath id="clip-path">
+          <circle id="fringe_outline" cx="373" cy="305" r="159.8" fill="none"></circle>
+        </clippath>
+        <clippath id="clip-path-2">
+          <path id="juice_outline" d="M617.4 450c20.5 0 52-37 61.2-48.6 1.3-1.6-.5-3.4-3.2-3.4h-116c-2.8 0-4.6 2-3.3 3.4C565.6 413 597 450 617.5 450z" fill="none"></path>
+        </clippath>
+      </defs>
+      <circle id="avatar_bg" cx="365.4" cy="435.9" r="220" fill="#FFF">   </circle>
+      <g id="avatar">
+        <g id="head">
+          <path id="hair_left" d="M471.5 523.6H243c-47.7 0-82.2-50.8-69-101.8l33.7-171.4c22.2-87 93.6-147 175-147 120.6 0 186 124.7 174.8 257.4-5.4 64.2-16.7 104.8-16.7 104.8-9 34.2-37 58-69.3 58z" fill="#a35064"></path>
+          <path id="hair_right" d="M288.3 523.6h228.4c47.8 0 82.3-50.8 69.2-101.8L552 250.3c-22.2-87-93.7-147-175-147-120.7 0-186 124.7-175 257.4C207.8 425 219 465.5 219 465.5c9 34.3 37 58 69.3 58z" fill="#a35064"></path>
+          <circle id="face" cx="376.4" cy="310.7" r="155.6" fill="#fcbfa4"></circle>
+          <circle id="ear_left" cx="218.4" cy="300.6" r="18.7" fill="#fcbfa4"></circle>
+          <circle id="ear_right" cx="528.4" cy="300.6" r="18.7" fill="#fcbfa4"></circle>
+          <g id="fringe_group" clip-path="url(#clip-path)">
+            <g id="fringe" fill="#a35064">
+              <circle id="fringe_right" cx="483.1" cy="128.9" r="128.9"></circle>
+              <ellipse id="fringe_left" cx="183.9" cy="153" rx="183.9" ry="122.9"></ellipse>
+            </g>
+          </g>
+          <g id="face_group">
+            <rect id="mouth_bite" x="353" y="341.8" width="44.4" height="51.8" rx="22.2" ry="22.2" fill="#bf2e62"></rect>
+            <ellipse id="mouth_woo" cx="398.3" cy="375.7" rx="14.1" ry="16.5" fill="#bf2e62"></ellipse>
+            <rect id="mouth_eat2" x="359.8" y="360.5" width="37.8" height="16.9" rx="8.5" ry="8.5" fill="#bf2e62"></rect>
+            <rect id="mouth_eat" x="351" y="356.4" width="55.3" height="25.1" rx="12.6" ry="12.6" fill="#bf2e62"></rect>
+            <path id="mouth_smile" d="M404 354.4l-.2 1.4c-1.4 12.6-11.4 22.5-24.3 22.5s-23-10-24.5-22.5v-1.3a5.8 5.8 0 0 1 5.7-5.7H398a5.8 5.8 0 0 1 6 5.6z" fill="#bf2e62"></path>
+            <g id="eyebrow" fill="#a35064">
+              <rect x="280.3" y="259.2" width="58.6" height="18.8" rx="9.4" ry="9.4"></rect>
+              <rect x="422.2" y="261.5" width="58.6" height="18.8" rx="9.4" ry="9.4"></rect>
+            </g>
+            <g id="eyes" fill="#402729">
+              <circle id="eye" cx="311.1" cy="303.6" r="14.9"></circle>
+              <circle id="eye" cx="454.8" cy="306.1" r="14.9"></circle>
+            </g>
+            <g id="blush" fill="#ffb2a4">
+              <circle cx="487.3" cy="345.3" r="14.1"></circle>
+              <circle cx="275.9" cy="337.4" r="14.1"></circle>
+            </g>
+          </g>
+        </g>
+        <g id="body">
+          <g id="tshirt">
+            <path d="M473.4 577.2v48A208.2 208.2 0 0 1 265 631v-53.6a104.2 104.2 0 0 1 72-99s32.4-10.3 60.6-1.3A104.2 104.2 0 0 1 473.4 577z" fill="#fcaf8d"></path>
+            <path d="M473.4 577.2v48A208.2 208.2 0 0 1 265 631v-53.6a104 104 0 0 1 64.6-96.3v1a38 38 0 1 0 76 0v-2.4a104.2 104.2 0 0 1 67.8 97.6z" fill="#fdd451"></path>
+            <path d="M418.4 485.4a50 50 0 0 1-99.6.8l3-1.5a47 47 0 0 0 93.7-.7z" fill="#fdecb6"></path>
+          </g>
+        </g>
+        <path id="neck" d="M337 478l-.5-17.5c13.5 4.7 23.4 4.8 37 4.8 7.2 0 17.2-.6 24-1.2v13l-18.8 2.4s-38.8 2-41.6-1.3z" fill="#fcaf8d"></path>
+        <path id="right_arm_0" d="M473.6 588v37.3a206 206 0 0 1-44 20.5V588z" fill="#fcaf8d"></path>
+        <path id="left_arm_0" d="M309 588v60.6a206.4 206.4 0 0 1-44-18v-42.5z" fill="#fcaf8d"></path>
+        <g id="right_arm_1">
+          <g id="right_arm_1_arm">
+            <path d="M429.2 536.8l49.7 33.6 27-40-49.7-33.7c-12.5-8.4-28.8-6.4-36.3 4.7a22.8 22.8 0 0 0-3 18.7 29.3 29.3 0 0 0 12.2 16.8z" fill="#fdd451"></path>
+            <path d="M479 570.4l50.2 34a24.2 24.2 0 0 0 27-40l-50.2-34z" fill="#fcaf8d"></path>
+          </g>
+          <g id="right_arm_1_hand" fill="#fcbfa4">
+            <rect id="hand" x="560.1" y="424" width="45.4" height="196.7" rx="22.7" ry="22.7" transform="rotate(-147.5 582.96 522.28)"></rect>
+            <rect id="thumb" x="570.7" y="448.3" width="26" height="45.9" rx="13" ry="13" transform="rotate(144.4 583.77 470.98)"></rect>
+          </g>
+        </g>
+        <g id="shine_right">
+          <g id="shine_right_star_3" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3">
+            <path d="M674 302v6M674 316v6M684 312h-6M670 312h-6M677 480v6M677 494v6M687 490h-6M673 490h-6"></path>
+          </g>
+          <g id="shine_right_star_2" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10">
+            <path d="M724.2 361.6v2.8M728.2 363.2l-2 2M730 367h-3M728.3 371l-2-2M724.4 372.8V370M720.5 371.2l2-2M718.8 367.3h2.7M720.3 363.4l2 2"></path>
+            <path stroke-width="2" d="M503.2 383.5v5M510.4 386.3l-3.6 3.6M513.5 393.4h-5M510.7 400.6l-3.5-3.6M503.7 403.7v-5M496.5 401l3.5-3.7M493.4 393.8h5M496.2 386.6l3.5 3.6"></path>
+          </g>
+          <g id="shine_right_star_1">
+            <circle cx="589" cy="316.1" r="5.9" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"></circle>
+            <circle cx="543.3" cy="439.9" r="4.8" fill="#fff"></circle>
+            <circle cx="733.7" cy="417.8" r="2.6" fill="#fff"></circle>
+          </g>
+        </g>
+        <g id="left_arm_1">
+          <g id="left_arm_1_arm">
+            <path d="M299.8 532.8L250 566.4l-27-40 49.7-33.7c12.5-8.4 28.8-6.4 36.3 4.7a22.8 22.8 0 0 1 3 18.7 29.3 29.3 0 0 1-12.2 16.8z" fill="#fdd451"></path>
+            <path d="M250.2 566.4l-50.3 34a24.2 24.2 0 0 1-27.2-40l50.3-34z" fill="#fcaf8d"></path>
+          </g>
+          <g id="left_arm_1_hand" fill="#fcbfa4">
+            <rect id="hand-2" data-name="hand" x="123.5" y="420" width="45.4" height="196.7" rx="22.7" ry="22.7" transform="rotate(-32.5 146.03 518.09)"></rect>
+            <rect id="thumb-2" data-name="thumb" x="132.4" y="444.3" width="26" height="45.9" rx="13" ry="13" transform="rotate(35.6 145.39 467.82)"></rect>
+          </g>
+        </g>
+        <g id="pizza_group">
+          <g id="bited">
+            <path d="M314.6 335.2a8 8 0 0 0-5.4 1l-47 29a12.7 12.7 0 0 1 .2-1.3 12 12 0 0 1 .4-2 11 11 0 0 1-6.5-18.4 8.8 8.8 0 0 1-2.3-7 8.4 8.4 0 0 1 .6-2.4l58.7.6z" fill="#ffde87"></path>
+            <path d="M321.4 344a8 8 0 0 1-3.8 6l-45 28a12.6 12.6 0 0 1-5.4-2.5 12.8 12.8 0 0 1-5-10.2l47-29a8 8 0 0 1 12.2 7.8z" fill="#fab171"></path>
+          </g>
+          <g id="stingies" fill="none" stroke="#ffde87" stroke-miterlimit="10">
+            <path id="stingy3" stroke-width="6" d="M199.3 376l56-21.2"></path>
+            <path id="stingy2" stroke-width="4" d="M197.6 368l56-21.2"></path>
+            <path id="stingy1" stroke-width="9" d="M190.5 350.3l58.8-11"></path>
+          </g>
+          <g id="pizza" data-name="pizza">
+            <path d="M262.8 362a11 11 0 0 1-6.5-18.3 8.8 8.8 0 0 1-2.3-7 8.4 8.4 0 0 1 .6-2.4L225 334c0 5.3-5.3 11.2-13.2 14s-18.5 1.4-20.7-4.5c-1-3 0-6.6 2.5-9.8l-67-.7a23.2 23.2 0 0 1 3 7l1.2 5.7a41 41 0 0 1 6.5-3c14-5.2 28-2 31.2 6.8S163 369.8 149 375a39.8 39.8 0 0 1-11.3 2.3l12.6 57 112-69a12.7 12.7 0 0 1 .2-1.3 12 12 0 0 1 .3-2zM182 402.3c-9 3.4-18.4 1.3-20.6-4.6s3.6-13.5 12.8-17 18.5-1.2 20.7 4.7-3.7 13.4-13 16.8zm46.5-26.8c-6 2.2-12 1-13.4-3s2.4-8.8 8.4-11 12-1 13.4 3-2.4 8.7-8.4 11z" fill="#ffde87"></path>
+            <path d="M149 375a39.8 39.8 0 0 1-11.3 2.3l12.6 57 .4 2 .2 1.3-21.4 11.4-.3-1.7L112 332.8h14.6a23.2 23.2 0 0 1 2.8 7l1.3 5.7a41 41 0 0 1 6.5-3c14-5.2 28-2 31.2 6.8S163 369.8 149 375zM195 385.3c2 6-3.7 13.5-13 17s-18.4 1.2-20.6-4.7 3.6-13.5 12.8-17 18.5-1.3 20.7 4.7zM211.8 348c-9.2 3.4-18.5 1.3-20.7-4.6-1-3 0-6.6 2.5-9.8l31.5.3c0 5.3-5.4 11-13.2 14zM228.4 375.4c-6 2.2-12 1-13.4-3s2.3-8.8 8.3-11 12-1 13.4 3-2.3 8.7-8.3 11z" fill="#ffde87"></path>
+            <path d="M146.2 455.8a23.3 23.3 0 0 0 4.7-18.2l-.3-1.2-.4-2 112-69a12.8 12.8 0 0 0 5 10 12.6 12.6 0 0 0 5.3 2.5z" fill="#fab171"></path>
+            <path d="M146.2 455.8l-13 8-1 .6a8 8 0 0 1-5.7.4 8 8 0 0 1-4.4-3.4 8 8 0 0 1 2.7-11l4.7-3 20.8-13 .4 2 .2 1.3a23.3 23.3 0 0 1-4.6 18z" fill="#fab171"></path>
+            <path d="M146.2 455.8a23.2 23.2 0 0 1-13.3 8.4h-.8a22.8 22.8 0 0 1-5.7.4 23.4 23.4 0 0 1-21.4-18.3L84 350a23.4 23.4 0 0 1 17.7-28 23 23 0 0 1 7.5-.3 23.5 23.5 0 0 1 17.5 11.2 23.2 23.2 0 0 1 2.8 7l1.3 5.6 3 13.6 1 4.3 3 13.8 12.5 57 .4 2 .2 1.3a23.3 23.3 0 0 1-4.8 18.2z" fill="#fab171"></path>
+            <path d="M228.4 375.4c-6 2.2-12 1-13.4-3s2.3-8.8 8.3-11 12-1 13.4 3-2.3 8.7-8.3 11z" fill="#ec7b61"></path>
+            <ellipse cx="227" cy="364.4" rx=".9" ry=".6" transform="rotate(-19.95 230.16 368.62)" fill="#e76247"></ellipse>
+            <ellipse cx="221.6" cy="369.6" rx="1.5" ry="1" transform="rotate(-20.1 221.89 370.18)" fill="#e76247"></ellipse>
+            <ellipse cx="224.6" cy="372.1" rx="1.5" ry="1" transform="rotate(-20.1 224.97 372.47)" fill="#e76247"></ellipse>
+            <ellipse cx="232.6" cy="368" rx="2.2" ry="1.4" transform="rotate(-19.95 235.84 372.24)" fill="#e76247"></ellipse>
+            <path d="M182 402c-9 3.5-18.4 1.4-20.6-4.5s3.6-13.5 12.8-17 18.5-1.2 20.7 4.7-3.7 13.5-13 17z" fill="#ec7b61"></path>
+            <ellipse cx="179.9" cy="385.3" rx="1.4" ry=".9" transform="rotate(-20.1 180.13 385.76)" fill="#e76247"></ellipse>
+            <ellipse cx="171.6" cy="393.3" rx="2.4" ry="1.5" transform="rotate(-20.1 172 393.92)" fill="#e76247"></ellipse>
+            <ellipse cx="176.1" cy="397.2" rx="2.4" ry="1.5" transform="rotate(-20.1 176.57 397.64)" fill="#e76247"></ellipse>
+            <ellipse cx="188.6" cy="390.8" rx="3.4" ry="2.2" transform="rotate(-20.1 188.79 391.08)" fill="#e76247"></ellipse>
+            <path d="M211.8 348c-9.2 3.4-18.5 1.3-20.7-4.6-1-3 0-6.6 2.5-9.8l31.5.3c0 5.3-5.4 11-13.2 14z" fill="#ec7b61"></path>
+            <ellipse cx="201.2" cy="339.2" rx="2.4" ry="1.5" transform="rotate(-20.1 201.71 339.54)" fill="#e76247"></ellipse>
+            <ellipse cx="205.8" cy="343.1" rx="2.4" ry="1.5" transform="rotate(-20.1 206.24 343.54)" fill="#e76247"></ellipse>
+            <ellipse cx="218.3" cy="336.6" rx="3.4" ry="2.2" transform="rotate(-20.1 218.74 337.03)" fill="#e76247"></ellipse>
+            <path d="M149 375a39.8 39.8 0 0 1-11.3 2.3l-3-13.8-1-4.3-3-13.6a41 41 0 0 1 6.6-3c14-5.2 28-2 31.2 6.8S163 369.8 149 375z" fill="#ec7b61"></path>
+            <ellipse cx="145.9" cy="349.5" rx="2.1" ry="1.3" transform="rotate(-20.1 146.02 350.04)" fill="#e76247"></ellipse>
+            <path d="M134.6 363.6l-1-4.3c1.5-.2 2.6.3 3 1.2s-.5 2.3-2 3z" fill="#e76247"></path>
+            <ellipse cx="140.1" cy="367.5" rx="3.5" ry="2.3" transform="rotate(-20.1 140.51 367.97)" fill="#e76247"></ellipse>
+            <ellipse cx="158.9" cy="357.8" rx="5.1" ry="3.3" transform="rotate(-20.1 159.13 358.18)" fill="#e76247"></ellipse>
+          </g>
+          <g id="drops" fill="#ffde87">
+            <rect id="drip3" x="201.8" y="384" width="15.8" height="38.4" rx="6.9" ry="6.9" transform="rotate(-.9 206.98 396.35)"></rect>
+            <rect id="drip3_1" x="202" y="426.6" width="15.8" height="15.8" rx="7.9" ry="7.9" transform="rotate(-.9 206.73 428.18)"></rect>
+            <rect id="drip2" x="178.2" y="403.4" width="15.8" height="48.4" rx="6.9" ry="6.9" transform="rotate(-.9 181.32 421.61)"></rect>
+            <rect id="drip1" x="165.4" y="413.1" width="15.8" height="63.5" rx="6.9" ry="6.9" transform="rotate(-.9 168.43 440.61)"></rect>
+          </g>
+        </g>
+        <g id="shine_left">
+          <g id="shine_left_star_3" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3">
+            <path d="M135.6 302v6M135.6 316v6M125.6 312h6M139.6 312h6M132.6 480v6M132.6 494v6M122.6 490h6M136.6 490h6"></path>
+          </g>
+          <g id="shine_left_star_2" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10">
+            <path d="M85.5 361.6v2.8M81.5 363.2l2 2M79.8 367h2.8M81.3 371l2-2M85.2 372.8V370M89.2 371.2l-2-2M91 367.3h-3M89.4 363.4l-2 2"></path>
+            <path stroke-width="2" d="M306.5 383.5v5M299.3 386.3l3.5 3.6M296.2 393.4h5M299 400.6l3.5-3.6M306 403.7v-5M313.2 401l-3.6-3.7M316.3 393.8h-5M313.5 386.6l-3.5 3.6"></path>
+          </g>
+          <g id="shine_left_star_1">
+            <circle cx="220.6" cy="316.1" r="5.9" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"></circle>
+            <circle cx="266.4" cy="439.9" r="4.8" fill="#fff"></circle>
+            <circle cx="75.9" cy="417.8" r="2.6" fill="#fff"></circle>
+          </g>
+        </g>
+        <g id="cocktailnlight_1">
+          <g id="lemon">
+            <circle cx="671.2" cy="410.5" r="25" fill="#fdd451"></circle>
+            <circle id="light_none" cx="671.2" cy="410.5" r="20.3" fill="none" stroke="#ffde87" stroke-miterlimit="10" stroke-width="3"></circle>
+          </g>
+          <g id="cup" fill="#fff">
+            <path id="cup_bottom" d="M619.4 521c-8.5 0-21.5 7.3-25.4 9.6-.5.3.2.7 1.3.7h48c1.2 0 2-.4 1.4-.7-3.8-2.3-16.8-9.7-25.3-9.7z"></path>
+            <path d="M617.4 454.8c18 0 45.3-28 53.5-36.8 1-1.2-.5-2.6-3-2.6H566.8c-2.4 0-4 1.4-2.8 2.6 8 8.8 35.4 36.8 53.4 36.8z" opacity="1"></path>
+            <rect x="612.6" y="447.4" width="13.5" height="13.5" rx="6.7" ry="6.7"></rect>
+            <rect x="613.9" y="454.2" width="10.9" height="13.5" rx="5.4" ry="5.4"></rect>
+            <path d="M617.4 464h4v58.4h-4z"></path>
+          </g>
+          <g id="juice" clip-path="url(#clip-path-2)">
+            <path id="juice_liquid" fill="#6cc" d="M554.6 429.2H677v30.4H554.7z"></path>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <div class="welcome_content">
+      <h3 class="content01">Hi ! I am Ulrika.</h3>
+      <h3 class="content02">A Pizza Lover...</h3>
+      <h3 class="content03">I Love Coding!</h3>
+    </div>
+  </div>
+  <div class="welcome_btn u-Btn">Replay</div>
+</div>
+<div class="section_content">
+  <div class="bg aboutStyle workStyle">
+    <div class="bricks"></div>
+    <div id="section_about"></div>
+    <div id="section_works"></div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/easing/EasePack.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TimelineLite.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

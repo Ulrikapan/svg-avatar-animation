@@ -1,0 +1,154 @@
+*
+  font-family: 'Dosis','Bungee Outline','Comfortaa', sans-serif
+  position: relative  
+//------ color start ------//
+$color_orange: #FF8886
+$color_yellow: #FFDE87
+$color_blue: #66CCCC
+$color_hair_normal: #a35064
+$color_white: #FFE0CE
+$gradient_home_bg: linear-gradient(to bottom, #FFCFAC 5px, $color_orange 300px )
+//------ color end ------//
+
+//------ mixin start ------//
+@mixin square($w)
+  width: $w
+  height: $w
+@mixin poaCenter
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+//------ mixin end ------//
+
+body
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+  background-color: $color_orange
+  
+// ------ Text Start ------//
+@font-face
+  font-family: GenJyuu
+  src: url(/fonts/GenJyuuGothic-Normal.0890a1f9.ttf) format("truetype")
+p
+  font-size: 16px
+h1
+  font-size: 48px
+h2
+  font-size: 40px
+h3
+  font-size: 32px
+h4
+  font-size: 24px
+@media screen and (max-width: 480px)
+  p
+    font-size: 12px
+  h1
+    font-size: 40px
+  h2
+    font-size: 32px
+  h3
+    font-size: 24px
+  h4
+    font-size: 16px
+    
+// ------ Text end ------//
+
+
+
+// ------ u-things start------//
+.notActive
+  display: none
+.u-Btn
+  padding: 10px 40px
+  letter-spacing: 1px
+  position: absolute
+  font-size: 16px
+  cursor: pointer
+// ------ u-things end------//
+  
+
+
+// ------ section_home start ------//
+.section_home
+  width: 100%
+  height: 100vh
+  overflow: hidden
+      
+  .welcome_btn
+    color: $color_white
+    border: 1px solid $color_white
+    bottom: 0px
+    margin: 30px
+    &:hover
+      background-color: $color_white
+      color: $color_orange
+    
+  .section_home_bg
+    background: $gradient_home_bg
+    position: absolute
+    width: 100%
+    height: 150vh
+    
+  .welcome_content
+    font-family: 'Comfortaa', sans-serif
+    text-align: center
+    border-right: 1px solid $color_white
+    color: $color_white
+    padding: 0px 10px
+    position: absolute
+    white-space: nowrap
+    transform: translateX(-50%)
+    left: 50%
+    bottom: -20%
+    overflow: hidden
+    display: inline-block
+    animation: textCursorBlink .8s infinite
+    
+    @keyframes textCursorBlink
+      from,to
+        border-right: 1px solid rgba($color_white,0)
+      50%
+        border-right: 1px solid rgba($color_white,1)
+
+    .content01
+      display: block
+    .content02, .content03, .content04
+      display: none
+    
+  /* Avatar Svg */
+  .avatarCanvas
+    +square(50vw)
+    max-width: 400px
+    max-height: 400px
+    min-width: 300px
+    min-height: 300px
+    +poaCenter
+    top: 40%
+    overflow: visible
+
+    svg
+      *
+        position: absolute
+      width: 100%
+      height: 100%
+      overflow: visible
+      #avatar_bg
+        position: absolute
+      #avatar
+        position: absolute
+      #eye
+        animation: eyeBlink 3.5s infinite
+        transform-origin: center center
+        @keyframes eyeBlink
+          0%
+            transform: scaleY(1)
+          1%
+            transform: scaleY(0)
+          1.5%
+            transform: scaleY(1)
+          100%
+            transform: scaleY(1)
+
+// ------ section_home end ------//

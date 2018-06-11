@@ -1,0 +1,166 @@
+* {
+  font-family: "Dosis", "Bungee Outline", "Comfortaa", sans-serif;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #FF8886;
+}
+
+@font-face {
+  font-family: GenJyuu;
+  src: url(/fonts/GenJyuuGothic-Normal.0890a1f9.ttf) format("truetype");
+}
+p {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+}
+.notActive {
+  display: none;
+}
+
+.u-Btn {
+  padding: 10px 40px;
+  letter-spacing: 1px;
+  position: absolute;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.section_home {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* Avatar Svg */
+}
+.section_home .welcome_btn {
+  color: #FFE0CE;
+  border: 1px solid #FFE0CE;
+  bottom: 0px;
+  margin: 30px;
+}
+.section_home .welcome_btn:hover {
+  background-color: #FFE0CE;
+  color: #FF8886;
+}
+.section_home .section_home_bg {
+  background: linear-gradient(to bottom, #FFCFAC 5px, #FF8886 300px);
+  position: absolute;
+  width: 100%;
+  height: 150vh;
+}
+.section_home .welcome_content {
+  font-family: "Comfortaa", sans-serif;
+  text-align: center;
+  border-right: 1px solid #FFE0CE;
+  color: #FFE0CE;
+  padding: 0px 10px;
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -20%;
+  overflow: hidden;
+  display: inline-block;
+  animation: textCursorBlink 0.8s infinite;
+}
+@keyframes textCursorBlink {
+  from,to {
+    border-right: 1px solid rgba(255, 224, 206, 0);
+  }
+  50% {
+    border-right: 1px solid #ffe0ce;
+  }
+}
+.section_home .welcome_content .content01 {
+  display: block;
+}
+.section_home .welcome_content .content02, .section_home .welcome_content .content03, .section_home .welcome_content .content04 {
+  display: none;
+}
+.section_home .avatarCanvas {
+  width: 50vw;
+  height: 50vw;
+  max-width: 400px;
+  max-height: 400px;
+  min-width: 300px;
+  min-height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  overflow: visible;
+}
+.section_home .avatarCanvas svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.section_home .avatarCanvas svg * {
+  position: absolute;
+}
+.section_home .avatarCanvas svg #avatar_bg {
+  position: absolute;
+}
+.section_home .avatarCanvas svg #avatar {
+  position: absolute;
+}
+.section_home .avatarCanvas svg #eye {
+  animation: eyeBlink 3.5s infinite;
+  transform-origin: center center;
+}
+@keyframes eyeBlink {
+  0% {
+    transform: scaleY(1);
+  }
+  1% {
+    transform: scaleY(0);
+  }
+  1.5% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
